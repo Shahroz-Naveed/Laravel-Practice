@@ -49,12 +49,12 @@ print_r($session);
 Route::get('set-session',function(Request $request){
 $request->session()->put('name','Amir Ali');
 $request->session()->put('address','Susan Road 213');
-$request->session()->put('email','amir@gmail.com');
+$request->session()->put('last_name','amir@gmail.com');
 
 return redirect('get-all-session');
 });
 route::get('destroy-session',function(){
-session()->forget(['name','email','address']);
+session()->forget(['name','email','last_name']);
 
 return redirect('get-all-session');
 });
